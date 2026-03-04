@@ -2,26 +2,32 @@
 
 int main()
 {
-    int n, i, num;
-    int evenCount = 0, oddCount = 0;
+    int N, K, i;
 
-    // Read the number of days
-    scanf("%d", &n);
-    // Loop to read each day number
-    for(i = 0; i < n; i++)
+    // Read number of elements
+    scanf("%d", &N);
+
+    int arr[N];
+
+    // Read array elements
+    for(i = 0; i < N; i++)
     {
-        scanf("%d", &num);
-        // Check if the number is even
-        if(num % 2 == 0)
-        {
-            evenCount++;   // Increment even counter
-        }
-        else
-        {
-            oddCount++;    // Increment odd counter
-        }
+        scanf("%d", &arr[i]);
     }
-    // Print the result
-    printf("Even:%d Odd:%d", evenCount, oddCount);
+
+    // Read value of K
+    scanf("%d", &K);
+
+    // Print rotated array (Left rotation by K)
+    for(i = K; i < N; i++)
+    {
+        printf("%d ", arr[i]);   // Print elements from K to N-1
+    }
+
+    for(i = 0; i < K; i++)
+    {
+        printf("%d ", arr[i]);   // Print first K elements at the end
+    }
+
     return 0;
 }
