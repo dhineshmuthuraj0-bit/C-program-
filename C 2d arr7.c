@@ -12,10 +12,8 @@ int main(){
             int rowMin=1,colMax=1;
             for(k=0;k<C;k++)
                 if(a[i][k]<a[i][j]) rowMin=0;
-
             for(k=0;k<R;k++)
                 if(a[k][j]>a[i][j]) colMax=0;
-
             if(rowMin && colMax) count++;
         }
     }
